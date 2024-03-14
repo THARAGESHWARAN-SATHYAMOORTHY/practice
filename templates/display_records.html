@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records</title>
+    <style>
+        /* Define your CSS styles for the table here */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Unique Agents</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>National Association ID</th>
+                <th>State License</th>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Street</th>
+                <th>City</th>
+                <th>County</th>
+                <th>State</th>
+                <th>Zipcode</th>
+                <th>Phone Numbers</th>
+                <th>Status</th>
+                <th>Brokerage ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for agent in unique_agents %}
+            <tr>
+                <td>{{ agent.id }}</td>
+                <td>{{ agent.national_association_id }}</td>
+                <td>{{ agent.state_license }}</td>
+                <td>{{ agent.email }}</td>
+                <td>{{ agent.first_name }}</td>
+                <td>{{ agent.street }}</td>
+                <td>{{ agent.city }}</td>
+                <td>{{ agent.county }}</td>
+                <td>{{ agent.state }}</td>
+                <td>{{ agent.zipcode }}</td>
+                <td>{{ agent.phone_numbers }}</td>
+                <td>{{ agent.status }}</td>
+                <td>{{ agent.brokerage_id }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

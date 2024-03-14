@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Market Information</title>
+</head>
+<body>
+    <h2>Market Information for Market ID: {{ market_id }}</h2>
+    
+    <h3>Top Agents:</h3>
+    <ul>
+        {% for agent in top_agents %}
+            <li>{{ agent.first_name }} - {{ agent.email }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h3>Top Brokerages:</h3>
+    <ul>
+        {% for brokerage in top_brokerages %}
+            <li>{{ brokerage.name }} - {{ brokerage.email }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
